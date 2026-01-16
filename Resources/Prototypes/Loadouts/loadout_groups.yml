@@ -617,6 +617,7 @@
   loadouts:
   - JesterHat
   - JesterAltHat
+  - ClownUsspHat #DS14
 
 - type: loadoutGroup
   id: ClownJumpsuit
@@ -626,6 +627,14 @@
   - ClownSkirt
   - JesterSuit
   - JesterAltSuit
+
+# DS14 Start
+- type: loadoutGroup
+  id: ClownNeck
+  name: loadout-group-clown-neck
+  loadouts:
+  - ClownNeckUssp
+# DS14 End
 
 - type: loadoutGroup
   id: ClownBackpack
