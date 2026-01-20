@@ -1,0 +1,41 @@
+- type: entity
+  id: ActionLoudspeakerArmor
+  name: "Зов СССП"
+  description: Вперёд братья! Наша воля нерушима!!!
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 60
+    icon:
+      sprite: _DeadSpace/Soyuz/Objects/Misc/loudspeaker.rsi
+      state: icon_armor
+  - type: InstantAction
+    event: !type:LoudspeakerArmorBuffActionEvent
+
+- type: entity
+  id: ActionLoudspeakerSpeed
+  name: "Патриотичный марш"
+  description: Вперёд братья! Мы быстры, как ветер!!!
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 60
+    icon:
+      sprite: _DeadSpace/Soyuz/Objects/Misc/loudspeaker.rsi
+      state: icon_speed
+  - type: InstantAction
+    event: !type:LoudspeakerSpeedBuffActionEvent
+
+- type: entity
+  id: ActionLoudspeakerHeal
+  name: "Дух родины"
+  description: Вперёд братья! Родина велит стоять до конца!!!
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 60
+    icon:
+      sprite: _DeadSpace/Soyuz/Objects/Misc/loudspeaker.rsi
+      state: icon_heal
+  - type: InstantAction
+    event: !type:LoudspeakerArmorBuffActionEvent
