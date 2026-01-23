@@ -1,0 +1,61 @@
+- type: entity
+  parent: BaseItem
+  id: LoudspeakerPolitLeader
+  name: кадило
+  description: Кадило, которое модифицированно особой системой испарения святой воды, эта система позволяет пару оказывать лечебный эффект.
+  components:
+  - type: UseDelay
+    delay: 30.0
+  - type: Sprite
+    sprite: _DeadSpace/Soyuz/Objects/Misc/loudspeaker.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Loudspeaker
+    damage: 
+      types:
+        Blunt:
+          -10
+        Piercing:
+          -10
+        Slash:
+          -10
+        Heat:
+          -10  
+        Cold:
+          -10
+        Poison:
+          -10
+        Asphyxiation:
+          -10
+        Bloodloss:
+          -10
+    durationOfSpeedBuff: 30
+    durationOfArmorBuff: 30
+    loudspeakerBuffModifier: LoudspeakeArmorBuff
+    movespeedModifierEffect: 
+      walkSpeedModifier: 1.2
+      sprintSpeedModifier: 1.2
+  - type: ActionGrant
+    actions:
+    - ActionLoudspeakerArmor
+    - ActionLoudspeakerHeal
+    - ActionLoudspeakerSpeed
+  - type: ItemActionGrant
+    actions:
+    - ActionLoudspeakerArmor
+    - ActionLoudspeakerHeal
+    - ActionLoudspeakerSpeed
+
+- type: damageModifierSet
+  id: LoudspeakeArmorBuff
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.9
+    Cold: 0.9
+    Poison: 0.9
+    Heat: 0.9
