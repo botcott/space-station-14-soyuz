@@ -212,7 +212,6 @@
     - Instruments
     - Equipment
     - NightVisionTech # DS14
-    - ProcessingTungsten # DS14-Soyuz
     - LanguageImplanters # DS14
     - MedicalDynamic # DS14
   - type: EmagLatheRecipes
@@ -414,9 +413,6 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
-    - ArmedTechFabCircuitboard # DS14-Soyuz
-    - ProcessingTungsten # DS14-Soyuz
-    - SecurityPoliceBeta # DS14-Soyuz
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SyndicateAmmoStatic

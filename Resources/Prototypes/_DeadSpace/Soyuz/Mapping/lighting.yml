@@ -3,8 +3,7 @@
   parent: BaseLightbulb
   name: советская лампочка
   id: LightBulbSoyuz
-  description: Обычная лампочка. Наверное, советское качество.
-  suffix: Союз
+  description: A power efficient light bulb.
   components:
   - type: LightBulb
     bulb: Bulb
@@ -23,7 +22,6 @@
   parent: BaseLightTubeCrystal
   id: LightTubeCrystalSoyuz
   name: советская лампа-трубка
-  description: Световая трубка. Наверное, советское качество.
   suffix: Союз
   components:
   - type: LightBulb
