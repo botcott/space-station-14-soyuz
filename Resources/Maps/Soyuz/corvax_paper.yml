@@ -91426,13 +91426,6 @@ entities:
     - type: Transform
       pos: 40.5,43.5
       parent: 2
-- proto: SpawnPointPolitruk
-  entities:
-  - uid: 15747
-    components:
-    - type: Transform
-      pos: 82.5,44.5
-      parent: 2
 - proto: SpawnPointPsychologist
   entities:
   - uid: 12801
