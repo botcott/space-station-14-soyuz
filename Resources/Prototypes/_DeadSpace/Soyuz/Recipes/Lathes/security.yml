@@ -374,3 +374,41 @@
     Steel: 75
     Plastic: 125
     IngotTungsten: 125
+
+- type: latheRecipe
+  id: PoliceBetaLegs
+  result: PoliceBetaLegs
+  completetime: 5
+  materials:
+    Steel: 500
+    Silver: 250
+    Plastic: 300
+
+- type: latheRecipe
+  id: PoliceBetaHead
+  result: PoliceBetaHead
+  completetime: 5
+  materials:
+    Steel: 500
+    Silver: 250
+    Gold: 250
+    Glass: 100
+    Plastic: 300
+
+- type: latheRecipe
+  id: PoliceBetaBody
+  result: PoliceBetaBody
+  completetime: 5
+  materials:
+    Steel: 1000
+    Silver: 500
+    Plastic: 400
+
+- type: latheRecipe
+  id: PoliceBetaComp
+  result: PoliceBetaComp
+  completetime: 5
+  materials:
+    Steel: 500
+    Silver: 500
+    Gold: 500

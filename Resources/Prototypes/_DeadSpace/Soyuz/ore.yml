@@ -1,0 +1,5 @@
+- type: ore
+  id: TungstenOre
+  oreEntity: TungstenOre1
+  minOreYield: 1
+  maxOreYield: 3

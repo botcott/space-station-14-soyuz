@@ -96,3 +96,11 @@
   - MagazineShotgunNewEmpty
   - MagazineShotgunDrum
   - MagazineShotgunDrumEmpty
+
+- type: latheRecipePack
+  id: SecurityPoliceBeta
+  recipes:
+  - PoliceBetaLegs
+  - PoliceBetaHead
+  - PoliceBetaComp
+  - PoliceBetaBody
