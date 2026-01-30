@@ -35,11 +35,9 @@ jobs:
           python <<'EOF'
           import yaml, re, os
           from datetime import datetime, timezone
-
-          CHANGELOG = "Resources/Changelog/ChangelogDS14.yml"
-
           import base64
 
+          # Получаем описание PR
           desc_b64 = os.environ.get("DESCRIPTION_B64", "")
           desc = base64.b64decode(desc_b64).decode("utf-8", errors="replace")
 
@@ -47,8 +45,15 @@ jobs:
           pr = os.environ.get("PR_NUMBER", "")
 
           # Убираем HTML-комментарии
-          desc = re.sub(r'<!--.*?-->', '', desc, flags=re.DOTALL)
+          desc_no_comments = re.sub(r'<!--.*?-->', '', desc, flags=re.DOTALL)
 
+          # Определяем путь к CHANGELOG
+          if ':v:' in desc_no_comments:
+              CHANGELOG = "Resources/Changelog/ChangelogDS14Soyuz.yml"
+          else:
+              CHANGELOG = "Resources/Changelog/ChangelogDS14.yml"
+
+          # Проверяем наличие :cl:
           if ":cl:" not in desc:
               print("Нет :cl: — пропуск")
               exit(0)
@@ -110,7 +115,7 @@ jobs:
                   indent=2
               )
 
-          print("Changelog обновлён")
+          print(f"Changelog обновлён: {CHANGELOG}")
           EOF
 
       - name: Commit and push to changelog
@@ -119,6 +124,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add Resources/Changelog/ChangelogDS14.yml
+          git add Resources/Changelog/ChangelogDS14Soyuz.yml
 
           if git diff --cached --quiet; then
             echo "Нет изменений для коммита"
