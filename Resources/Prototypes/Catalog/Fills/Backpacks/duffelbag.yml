@@ -53,7 +53,7 @@
   - type: StorageFill
     contents:
       - id: WeaponSubMachineGunC20r
-      - id: MagazinePistolSubMachineGunFMJ #DS: FMJ pulki
+      - id: MagazinePistolSubMachineGun
         amount: 2
 #     - id: SMGSuppressor
 
@@ -132,7 +132,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: MagazinePistolSubMachineGunFMJ #DS: FMJ pulki
+      - id: MagazinePistolSubMachineGun
         amount: 4
       - id: MagazineShotgun
         amount: 4

@@ -29,6 +29,21 @@
         color: "#ffffff"
 
 - type: entity
+  id: CartridgeLightestRifleSilver
+  name: патрон (5.45х39 мм винтовочный серебряный)
+  parent: BaseCartridgeLightestRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightestRifleSilver
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ffffff"
+
+- type: entity
   id: CartridgeLightRifleSilver
   name: патрон (7.62х39 мм винтовочный серебряный)
   parent: BaseCartridgeLightRifle
