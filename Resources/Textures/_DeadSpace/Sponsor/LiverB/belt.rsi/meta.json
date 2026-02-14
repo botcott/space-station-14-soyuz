@@ -1,17 +1,18 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Made by uRim for SS14 server Мёртвый Космос",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c838ba21dae97db345e0113f99596decd1d66039",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "drill_bolt"
+      "name": "icon"
     },
     {
-      "name": "drill_screw"
+      "name": "equipped-BELT",
+      "directions": 4
     },
     {
       "name": "inhand-left",
@@ -19,10 +20,6 @@
     },
     {
       "name": "inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "equipped-BELT",
       "directions": 4
     }
   ]
