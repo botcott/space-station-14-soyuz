@@ -427,7 +427,7 @@
     sprite: Objects/Weapons/Guns/SMGs/vector.rsi
     state: icon
   content:
-  - WeaponSubMachineGunVectorFMJ
+  - WeaponSubMachineGunVector
   - MagazinePistolSubMachineGunFMJ
   - MagazinePistolSubMachineGunFMJ
   - MagazinePistolSubMachineGunFMJ
@@ -442,7 +442,7 @@
     sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
     state: icon
   content:
-  - WeaponRifleLecterHP
+  - WeaponRifleLecter
   - MagazineRifleHP
   - MagazineRifleHP
   - MagazineRifleHP
