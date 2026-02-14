@@ -1,7 +1,11 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
+<<<<<<<< HEAD:Resources/Textures/_DeadSpace/Necromorfs/BSAA/misc/bsaa-hypo.rsi/meta.json
   "copyright": "made by sastr. (discord) for Space Station 14 server Мёртвый Космос",
+========
+  "copyright": "Taken from tgstation",
+>>>>>>>> upstream/master:Resources/Textures/_DeadSpace/Sponsor/rtwo45/assault.rsi/meta.json
   "size": {
     "x": 32,
     "y": 32
@@ -9,6 +13,10 @@
   "states": [
     {
       "name": "icon"
+    },
+    {
+      "name": "equipped-BELT",
+      "directions": 4
     },
     {
       "name": "inhand-left",

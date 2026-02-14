@@ -120,7 +120,7 @@
   description: Стандартные носки ведущего утилизатора.
   components:
   - type: Sprite
-    sprite: _DeadSpace/Clothing/Underwear/Cargo/senior_courier/socks.rsi
+    sprite: _DeadSpace/Clothing/Underwear/Cargo/salvage_specialist/socks.rsi
 
 ## Civilian
 - type: entity

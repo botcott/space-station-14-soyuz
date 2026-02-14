@@ -1,4 +1,4 @@
-# IPC
+﻿# IPC
 marking-IPCHead = Голова КПБ
 marking-IPCChest = Торс КПБ
 marking-IPCRArm = Правая рука КПБ

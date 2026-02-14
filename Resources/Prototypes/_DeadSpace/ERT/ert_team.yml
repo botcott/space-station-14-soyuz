@@ -4,7 +4,7 @@
   startAnnouncement: station-event-response-team-arrival-cburn
   startAudio:
     path: /Audio/_DeadSpace/Announcements/centcomm.ogg # DS14-Announcements
-  description: 
+  description:
     Специализированный отряд радиационной, химической и биологической зомби защиты
     NanoTrasen. Предназначен для локализации утечек опасных веществ,
     биологических угроз, а также проведения дезинфекции и эвакуации персонала
@@ -37,7 +37,7 @@
   startAnnouncement: station-event-response-team-arrival-cburn-sierra
   startAudio:
     path: /Audio/_DeadSpace/Announcements/centcomm.ogg # DS14-Announcements
-  description: 
+  description:
     Элитный специализированный отряд радиационной, химической и биологической зомби защиты
     NanoTrasen. Предназначен для локализации утечек особо опасных веществ,
     биологических угроз, а также проведения дезинфекции и эвакуации персонала
@@ -71,7 +71,7 @@
   startAnnouncement: station-event-response-team-arrival
   startAudio:
     path: /Audio/_DeadSpace/Announcements/centcomm.ogg # DS14-Announcements
-  description: 
+  description:
     Отряд инженеров NanoTrasen, специализирующихся на ремонте и техническом обслуживании
     космических станций и кораблей. Они обладают обширными знаниями в области
     инженерии, систем жизнеобеспечения и ремонта оборудования.
@@ -105,11 +105,11 @@
   startAnnouncement: station-event-response-team-arrival
   startAudio:
     path: /Audio/_DeadSpace/Announcements/centcomm.ogg # DS14-Announcements
-  description: 
+  description:
     Отряд быстрого реагирования Эмбер NanoTrasen, предназначенный для
     проведения разведывательных операций и оказания поддержки силам
-    Службы Безопасности в борьбе с незначительными угрозами, в случае 
-    если текущий состав слишком мал. 
+    Службы Безопасности в борьбе с незначительными угрозами, в случае
+    если текущий состав слишком мал.
     5 членов отряда прибывают на шаттле Эмбер, который оснащён всем
     необходимым оборудованием для выполнения их миссии.
     Время прибытия отряда от 5 до 10 минут.
@@ -181,7 +181,7 @@
   startAnnouncement: station-event-response-team-arrival-gamma
   startAudio:
     path: /Audio/_DeadSpace/Announcements/centcomm.ogg # DS14-Announcements
-  description: 
+  description:
     Отряд специального назначения NanoTrasen, предназначенный для
     быстрого реагирования на чрезвычайные ситуации и угрозы безопасности на
     космических станциях и кораблях. Они обучены для выполнения различных
@@ -218,8 +218,8 @@
   name: АПБТ
   startAudio:
     path: /Audio/_DeadSpace/Announcements/centcomm.ogg # DS14-Announcements
-  description: 
-    Альянс Противодействия Биологической и Террористической угрозе NanoTrasen, 
+  description:
+    Альянс Противодействия Биологической и Террористической угрозе NanoTrasen,
     предназначенный очистить станцию от биологической и террористической угрозы.
     Данный отряд отправляется при вторжении террористов Круг или в случае масштабного всплеска ред-спейс.
     Время прибытия отряда от 20 до 25 минут.
@@ -247,7 +247,7 @@
   startAnnouncement: station-event-centcomm-official-arrival
   startAudio:
     path: /Audio/_DeadSpace/Announcements/centcomm.ogg # DS14-Announcements
-  description: 
+  description:
     Представитель Центрального Командования NanoTrasen, прибывающий на станцию
     для решения возникших проблем, которые не могут быть решены обычным способом.
     Представитель Центрального Командования и 3 офицера Синий Щит прибывают
