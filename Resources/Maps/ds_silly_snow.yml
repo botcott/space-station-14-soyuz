@@ -46490,13 +46490,13 @@ entities:
     - type: Transform
       pos: 23.5,-10.5
       parent: 2
-# - proto: SpawnPointSeniorSalvageSpecialist
-#   entities:
-#   - uid: 5660
-#     components:
-#     - type: Transform
-#       pos: 23.5,17.5
-#       parent: 2
+- proto: SpawnPointSeniorCourier
+  entities:
+  - uid: 5660
+    components:
+    - type: Transform
+      pos: 23.5,17.5
+      parent: 2
 - proto: SpawnPointServiceWorker
   entities:
   - uid: 5661
@@ -47057,13 +47057,13 @@ entities:
     - type: Transform
       pos: -25.5,38.5
       parent: 2
-- proto: SuitStorageSeniorSalvageSpecialistFilled
-  entities:
-  - uid: 5729
-    components:
-    - type: Transform
-      pos: 23.5,16.5
-      parent: 2
+# - proto: SuitStorageSeniorSalvageSpecialistFilled
+#   entities:
+#   - uid: 5729
+#     components:
+#     - type: Transform
+#       pos: 23.5,16.5
+#       parent: 2
 - proto: SurveillanceCameraGeneral
   entities:
   - uid: 5730

@@ -144582,13 +144582,13 @@ entities:
     - type: Transform
       pos: 11.5,-42.5
       parent: 2
-# - proto: SpawnPointSeniorSalvageSpecialist
-#   entities:
-#   - uid: 20363
-#     components:
-#     - type: Transform
-#       pos: -48.5,0.5
-#       parent: 2
+- proto: SpawnPointSeniorCourier
+  entities:
+  - uid: 20363
+    components:
+    - type: Transform
+      pos: -48.5,0.5
+      parent: 2
   - uid: 20364
     components:
     - type: Transform
