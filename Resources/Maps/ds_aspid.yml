@@ -147517,13 +147517,13 @@ entities:
     - type: Transform
       pos: -13.5,19.5
       parent: 2
-- proto: SpawnPointSeniorSalvageSpecialist
-  entities:
-  - uid: 18373
-    components:
-    - type: Transform
-      pos: -41.5,25.5
-      parent: 2
+# - proto: SpawnPointSeniorSalvageSpecialist
+#   entities:
+#   - uid: 18373
+#     components:
+#     - type: Transform
+#       pos: -41.5,25.5
+#       parent: 2
 - proto: SpawnPointServiceWorker
   entities:
   - uid: 18374
