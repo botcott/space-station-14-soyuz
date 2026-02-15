@@ -16,60 +16,57 @@ jobs:
           BODY=$(printf '%s' "${{ github.event.pull_request.body }}" | base64 -w0)
           echo "DESCRIPTION_B64=$BODY" >> $GITHUB_OUTPUT
           echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
-          echo "AUTHOR=${{ github.event.pull_request.user.login }}" >> $GITHUB_OUTPUT
           echo "REPO=${{ github.repository }}" >> $GITHUB_OUTPUT
 
-      - name: Check conditions and Parse PR
+      - name: Parse PR and Format Text
         id: parse_step
         env:
           DESCRIPTION_B64: ${{ steps.extract.outputs.DESCRIPTION_B64 }}
           PR_NUMBER: ${{ steps.extract.outputs.PR_NUMBER }}
-          AUTHOR: ${{ steps.extract.outputs.AUTHOR }}
           REPO: ${{ steps.extract.outputs.REPO }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           python <<'EOF'
           import re, os, base64
 
           desc_b64 = os.environ.get("DESCRIPTION_B64", "")
           desc = base64.b64decode(desc_b64).decode("utf-8", errors="replace")
+          pr_num = os.environ.get("PR_NUMBER")
+          repo = os.environ.get("REPO")
+          author = os.environ.get("AUTHOR") # Имя автора PR
 
           desc_clean = re.sub(r'<!--.*?-->', '', desc, flags=re.DOTALL)
 
           if ":cl:" not in desc_clean or ":v:" not in desc_clean:
-              print("Пропуск: нет :cl: или :v:")
-              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-                  f.write("should_send=false\n")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as f: f.write("should_send=false\n")
               exit(0)
 
           sections = {
-              "Добавлено": "🆕 **Добавлено:**",
-              "Удалено": "❌ **Удалено:**",
-              "Изменено": "⚒️ **Изменено:**",
-              "Исправлено": "🐛 **Исправлено:**",
+              "Добавлено": "🆕",
+              "Удалено": "❌",
+              "Изменено": "⚒️",
+              "Исправлено": "🐛",
           }
 
-          content_parts = [f"**Изменение (PR #{os.environ['PR_NUMBER']})**"]
+          pr_link = f"[#{pr_num}](<https://github.com{repo}/pull/{pr_num}>)"
+          content_lines = [f"**{author} updated:**"]
 
           found_any = False
-          for title, display_name in sections.items():
+          for title, emoji in sections.items():
               pattern = rf"- {title}:\s*(.*?)(?=\n- [^:]|$)"
               match = re.search(pattern, desc_clean, flags=re.DOTALL)
               if match:
-                  val = match.group(1).strip()
-                  if val:
-                      content_parts.append(f"{display_name}\n{val}")
+                  block = match.group(1).strip()
+                  lines = [l.strip("- ").strip() for l in block.splitlines() if l.strip()]
+                  for line in lines:
+                      content_lines.append(f"{emoji} - {line} ({pr_link})")
                       found_any = True
 
           if not found_any:
-              print("Изменения не найдены внутри секций")
-              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-                  f.write("should_send=false\n")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as f: f.write("should_send=false\n")
               exit(0)
 
-          content_parts.append(f"👤 **Автор:** {os.environ['AUTHOR']}")
-          content_parts.append(f"🔗 <https://github.com{os.environ['REPO']}/pull/{os.environ['PR_NUMBER']}>")
-
-          full_message = "\n\n".join(content_parts)
+          full_message = "\n".join(content_lines)
 
           with open("discord_msg.txt", "w", encoding="utf-8") as f:
               f.write(full_message)
@@ -87,7 +84,8 @@ jobs:
 
           jq -n --arg msg "$MESSAGE_TEXT" '{
             "username": "Союз-1",
-            "content": $msg
+            "content": $msg,
+            "allowed_mentions": { "parse": [] }
           }' | curl -X POST \
             -H "Content-Type: application/json" \
             -d @- \
