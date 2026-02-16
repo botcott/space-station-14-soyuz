@@ -22,3 +22,31 @@ Entries:
     message: HEX коды объявлений ЦК
   - type: Fix
     message: Цвет ПНВ СОБР гаммы
+- id: 3
+  author: botcott
+  time: '2026-02-15T16:27:07.688139+00:00'
+  pr: 101
+  changes:
+  - type: Fix
+    message: Фикс автоматического ченжлога
+- id: 4
+  author: botcott
+  time: '2026-02-15T19:34:47.329235+00:00'
+  pr: 102
+  changes:
+  - type: Tweak
+    message: Изменён спрайт юбки-карандаша Политрука
+  - type: Fix
+    message: Исправлен баг с Ведущим Логистом из-за Апстрима
+- id: 5
+  author: PERed5
+  time: '2026-02-16T12:08:58.813877+00:00'
+  pr: 100
+  changes:
+  - type: Add
+    message: Технология производства титана и пластитана в т3 нио, стоимость 20.000
+      очков
+  - type: Tweak
+    message: Спрайты каждого станционного борга
+  - type: Fix
+    message: Телепортеры СГШ
