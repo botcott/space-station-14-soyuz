@@ -32,7 +32,7 @@ public sealed partial class NecromorfPrototype : IPrototype
 
     [DataField]
     [AlwaysPushInheritance]
-    public ComponentRegistry Components { get; } = new();
+    public ComponentRegistry Components { get; private set; } = new();
 
     [DataField]
     [ViewVariables(VVAccess.ReadWrite)]
